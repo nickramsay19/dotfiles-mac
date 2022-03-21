@@ -1,0 +1,77 @@
+" File: .vimrc
+" Author: Nick Ramsay
+
+" color themes
+set t_Co=256
+syntax on
+set termguicolors
+"colorscheme aquarium
+
+" disable compatibility with vi
+set nocompatible
+
+" filetypes
+filetype on
+filetype plugin on
+filetype indent on
+
+" enable line numbers
+set number
+"set cursorline
+"set cursorcolumn
+
+" tabs & indents
+set tabstop=4
+set shiftwidth=4
+set autoindent
+
+" searches
+set incsearch
+set ignorecase
+set showmatch
+set hlsearch
+
+" autocompletion
+set wildmenu
+" disable automatic comment line continuation
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" --- General settings ---
+set backspace=indent,eol,start
+set ruler
+set showcmd
+set mouse=a
+
+" un-bind arrow keys
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+" Clear status line when vimrc is reloaded.
+set statusline=
+" Status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+" Use a divider to separate the left side from the right side.
+set statusline+=%=
+" Status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+" Show the status on the second to last line.
+set laststatus=2
+
+" Quick save and exit
+" Remap Escape
+imap jk <Esc> 
+" Remap Colon to semicolon
+nmap ; :
+noremap ;; ;
+
+" move .viminfo file to .vim dir
+set viminfo+=n,~/.vim/viminfo
+
+" disable .netrwhist
+let g:netrw_dirhistmax = 0

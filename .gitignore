@@ -1,0 +1,11 @@
+# ignore everything
+*
+
+# to include
+.gitignore
+!.vim
+!.vim/*
+~.zshenv
+!.zsh
+!.zsh/*
+
