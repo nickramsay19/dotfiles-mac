@@ -2,10 +2,11 @@
 *
 
 # to include
+README.md
 .gitignore
 !.vim
 !.vim/*
-~.zshenv
+!.zshenv
 !.zsh
 !.zsh/*
 
